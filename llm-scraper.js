@@ -112,7 +112,10 @@ export default class LlmScraper {
 
     async start(headless) {
         return new Promise(async (resolve, reject) => {
-            this.browser = await puppeteer.launch({ headless: false });
+            this.browser = await puppeteer.launch({
+                headless: false,
+                args: ['--no-sandbox'],
+            });
             this.page = await this.browser.newPage();
 
             //await this.page.setViewport({ width: 640, height: 480, deviceScaleFactor: 1 });
