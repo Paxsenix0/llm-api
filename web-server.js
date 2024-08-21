@@ -23,7 +23,7 @@ export default class webServer {
     }
     start() {
         this.loadRoutes();
-        this.app.listen(3000, () => {
+        this.app.listen(3241, () => {
             console.log('Server is running on http://127.0.0.1:3000');
         });
     }
