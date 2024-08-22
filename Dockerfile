@@ -12,7 +12,7 @@ USER node # non-root user that comes with `node` images.
 WORKDIR /app
 
 COPY --chown=node package.json .
-COPY --chown=node package-lock.json .
+#COPY --chown=node package-lock.json .
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/chromium
