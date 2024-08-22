@@ -29,7 +29,10 @@ app.get('/api/query', (req, res) => {
 export default function (app, scraper) {
     app.get('/api/query', async (req, res) => {
         try {
-            let llmResponse = await scraper.query(req.query.string);
+            let llmResponse = await scraper.query(
+                req.query.string,
+                req.query.cid
+            );
             res.status(200).json(llmResponse);
         } catch (err) {
             res.status(500).json({ error: err.message });
