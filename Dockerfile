@@ -1,5 +1,7 @@
 FROM node:16
 
+RUN echo "Using Dockerfile"
+
 RUN apt-get update \
  && apt-get install -y chromium \
     fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf libxss1 \
