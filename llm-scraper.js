@@ -115,6 +115,7 @@ export default class LlmScraper {
             this.browser = await puppeteer.launch({
                 headless: true,
                 args: ['--no-sandbox'],
+                protocolTimeout: 60000
             });
             this.page = await this.browser.newPage();
 
