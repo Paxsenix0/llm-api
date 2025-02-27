@@ -80,7 +80,7 @@ export default class LlmScraper {
             //wait for all network requests to finish
             //await this.page.waitForNetworkIdle();
             await this.page.waitForResponse(async (response) => {
-                //console.log(response.url());
+                console.log(response.url());
                 if (response.url() == 'https://chat.mistral.ai/api/chat') {
                     await response.text();
                     console.log('Response finished generating.');
@@ -132,9 +132,9 @@ export default class LlmScraper {
 
             await this.page.waitForNetworkIdle();
 
-            console.log('Logging in');
+            /*console.log('Logging in');
 
-            this.login('myst.trash@gmail.com', '15937Ab!');
+            this.login('myst.trash@gmail.com', '15937Ab!');*/
 
             await this.page.waitForNetworkIdle();
 
